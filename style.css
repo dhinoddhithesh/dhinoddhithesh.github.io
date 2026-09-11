@@ -645,3 +645,91 @@ footer {
     }
 
 }
+/* =========================
+   ADDITIONAL PUBLICATION STYLES
+========================= */
+
+
+/* Submitted status */
+
+.publication-status.submitted {
+    background: #fff3d9;
+    color: #755400;
+}
+
+
+/* Published abstract / presentation */
+
+.publication-status.abstract {
+    background: #e8eef8;
+    color: #304d78;
+}
+
+
+/* Full citation */
+
+.publication-citation {
+    margin-top: 18px;
+
+    padding: 18px 20px;
+
+    background: #f7f8fa;
+
+    border-left: 3px solid #17324d;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #444;
+}
+
+
+/* Publication links */
+
+.publication-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.publication-link {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    background: #17324d;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+
+.publication-link:hover {
+    background: #284d70;
+
+    transform: translateY(-1px);
+}
+
+
+.publication-link.secondary {
+    background: #eef2f5;
+
+    color: #17324d;
+}
+
+
+.publication-link.secondary:hover {
+    background: #dfe7ed;
+}
