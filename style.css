@@ -104,13 +104,14 @@ footer {
 
 /* Profile photograph */
 
-.hero img.profile-photo {
+.profile-photo {
     width: 220px !important;
     height: 220px !important;
     max-width: 220px !important;
     object-fit: cover;
-    object-position: 50% 65%;
+    object-position: center;
     border-radius: 50%;
     display: block;
     margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
