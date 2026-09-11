@@ -733,3 +733,99 @@ footer {
 .publication-link.secondary:hover {
     background: #dfe7ed;
 }
+/* =========================
+   CLICKABLE PUBLICATION TITLES
+========================= */
+
+.publication-title-link {
+    color: #222;
+    text-decoration: none;
+}
+
+.publication-title-link:hover {
+    color: #17324d;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   INDIVIDUAL PUBLICATION PAGE
+========================= */
+
+.publication-page {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 70px 25px 100px;
+}
+
+.publication-page h1 {
+    font-size: 42px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.publication-page-authors {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.publication-page-journal {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.publication-detail-section {
+    max-width: none !important;
+    padding: 40px 0 !important;
+    border-top: 1px solid #e2e6ea;
+}
+
+.publication-detail-section h2 {
+    font-size: 26px;
+}
+
+.abstract-text {
+    max-width: 850px;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #17324d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* PDF viewer */
+
+.paper-preview {
+    width: 100%;
+    height: 750px;
+
+    margin-top: 20px;
+
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 700px) {
+
+    .publication-page h1 {
+        font-size: 32px;
+    }
+
+    .paper-preview {
+        height: 550px;
+    }
+
+}
