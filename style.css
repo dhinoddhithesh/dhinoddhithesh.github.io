@@ -115,3 +115,13 @@ footer {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 }
+.hero img.profile-photo {
+    width: 220px !important;
+    height: 220px !important;
+    max-width: 220px !important;
+    object-fit: cover;
+    object-position: 50% 65%;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 30px;
+}
