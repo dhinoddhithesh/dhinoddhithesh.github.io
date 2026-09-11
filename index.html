@@ -1,83 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dhino Dhithesh | Researcher</title>
 
     <style>
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f7f8fa;
+            font-family: Arial, sans-serif;
             color: #222;
+            background: #ffffff;
+            line-height: 1.6;
         }
 
-        header {
-            background: #152238;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
+        nav {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
         }
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        header p {
+        nav strong {
             font-size: 20px;
         }
 
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 40px 10%;
+            background: #f5f7f9;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-weight: normal;
+            color: #555;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 12px;
+            padding: 12px 22px;
+            background: #17324d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
         section {
-            max-width: 900px;
+            max-width: 1100px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 80px 25px;
         }
 
         h2 {
-            color: #152238;
+            font-size: 32px;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 25px;
+            border-radius: 10px;
+            background: white;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            background: #152238;
+            background: #17324d;
             color: white;
+            padding: 35px;
         }
+
+        @media(max-width: 700px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav div {
+                display: none;
+            }
+
+        }
+
     </style>
+
 </head>
 
 <body>
 
-<header>
-    <h1>Dhino Dhithesh Neethiyarasu</h1>
-    <p>Food Science & Biotechnology Researcher</p>
-</header>
+<nav>
 
-<section>
+    <strong>Dhino Dhithesh</strong>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+
+<section class="hero">
+
+    <div>
+
+        <h1>Dhino Dhithesh Neethiyarasu</h1>
+
+        <h2>Food Science & Biotechnology Researcher</h2>
+
+        <p>
+            Researching sustainable food systems, biotechnology,
+            biosensing and nutritional innovation through multidisciplinary
+            approaches spanning food science, microbiology,
+            nanotechnology and analytical science.
+        </p>
+
+        <a class="button" href="#research">Explore My Research</a>
+
+        <a class="button" href="#publications">Publications</a>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
     <h2>About Me</h2>
 
     <p>
-        I am a researcher with a background in Food Science,
-        Biotechnology and multidisciplinary laboratory research.
-        My interests include sustainable food biotechnology,
-        biosensors, nanobiotechnology and plant biotechnology.
+        I am a researcher with an interdisciplinary background in food
+        science and biotechnology. I hold an MSc in Food Science and
+        Biotechnology with Distinction and a First-Class BSc (Hons)
+        in Biotechnology.
     </p>
-</section>
-
-<section>
-    <h2>Research</h2>
 
     <p>
-        This website is currently under development.
-        My research projects, publications and academic experience
-        will be added soon.
+        My research experience spans sustainable mushroom cultivation,
+        circular bioresources, electrochemical biosensors,
+        nanobiotechnology, microbiology and analytical food science.
+        I am particularly interested in translating biotechnology into
+        solutions for sustainable food production, nutrition and health.
     </p>
+
 </section>
 
+
+<section id="research">
+
+    <h2>Research</h2>
+
+    <div class="research-grid">
+
+        <div class="card">
+            <h3>🍄 Sustainable Mushroom Cultivation</h3>
+
+            <p>
+                Investigating the valorisation of brewers' spent grain
+                as a sustainable substrate for Pleurotus ostreatus
+                cultivation and post-harvest quality.
+            </p>
+        </div>
+
+
+        <div class="card">
+
+            <h3>🧬 Biosensors & Diagnostics</h3>
+
+            <p>
+                Development of 3D-printed graphene-polymer
+                electrochemical biosensors for biomarker detection.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🌊 Circular Food Biotechnology</h3>
+
+            <p>
+                Exploring seaweed, brewing side-streams and other
+                bioresources for sustainable food and biotechnology
+                applications.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🧪 Nanobiotechnology</h3>
+
+            <p>
+                Green synthesis and characterisation of metal
+                nanoparticles for antioxidant, antibacterial
+                and photocatalytic applications.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="publications">
+
+    <h2>Publications & Research Outputs</h2>
+
+    <p>
+        Peer-reviewed publications, conference papers,
+        manuscripts and presentations will be listed here.
+    </p>
+
+</section>
+
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        I welcome enquiries regarding research collaboration,
+        PhD opportunities and interdisciplinary projects.
+    </p>
+
+    <p>
+        Email | LinkedIn | ORCID | ResearchGate | Google Scholar
+    </p>
+
+</section>
+
+
 <footer>
+
     © 2026 Dhino Dhithesh Neethiyarasu
+
 </footer>
 
 </body>
