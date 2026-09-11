@@ -103,16 +103,6 @@ footer {
 }
 /* Profile photograph */
 
-.hero .profile-photo {
-    width: 220px;
-    height: 220px;
-    max-width: 220px;
-    object-fit: cover;
-    object-position: 50% 65%;
-    border-radius: 50%;
-    display: block;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 }
 .hero img.profile-photo {
