@@ -115,3 +115,47 @@ footer {
     margin-bottom: 30px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
+.hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 0 0 260px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 240px !important;
+    height: 240px !important;
+    max-width: 240px !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media(max-width: 800px) {
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image {
+        flex: none;
+    }
+
+    .profile-photo {
+        width: 190px !important;
+        height: 190px !important;
+    }
+}
