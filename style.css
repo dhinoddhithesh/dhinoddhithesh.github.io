@@ -1,10 +1,27 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #222;
     background: #ffffff;
     line-height: 1.6;
 }
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     background: white;
@@ -12,9 +29,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eeeeee;
+
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 nav strong {
@@ -24,98 +43,32 @@ nav strong {
 nav a {
     margin-left: 25px;
     text-decoration: none;
-    color: #333;
+    color: #333333;
 }
 
+nav a:hover {
+    color: #17324d;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero {
-    min-height: 75vh;
-    padding: 60px 8%;
+    min-height: 80vh;
+    max-width: none;
+
     background: #f5f7f9;
+
+    padding: 70px 8%;
+
     display: flex;
     align-items: center;
 }
 
-.hero h1 {
-    font-size: 52px;
-    margin-bottom: 10px;
-}
 
-.hero h2 {
-    font-weight: normal;
-    color: #555;
-}
-
-.hero p {
-    max-width: 700px;
-    font-size: 20px;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 12px;
-    padding: 12px 22px;
-    background: #17324d;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 25px;
-}
-
-h2 {
-    font-size: 32px;
-}
-
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.card {
-    border: 1px solid #ddd;
-    padding: 25px;
-    border-radius: 10px;
-    background: white;
-}
-
-footer {
-    text-align: center;
-    background: #17324d;
-    color: white;
-    padding: 35px;
-}
-
-@media(max-width: 700px) {
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    nav div {
-        display: none;
-    }
-}
-
-/* Profile photograph */
-
-.profile-photo {
-    width: 220px !important;
-    height: 220px !important;
-    max-width: 220px !important;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    display: block;
-    margin-bottom: 30px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-/* Hero layout */
+/* Main two-column hero layout */
 
 .hero-content {
     width: 100%;
@@ -139,31 +92,62 @@ footer {
 .hero-text h1 {
     font-size: 52px;
     line-height: 1.15;
+
     margin: 0 0 20px 0;
 }
 
 .hero-text h2 {
     font-size: 30px;
     font-weight: normal;
-    color: #555;
-    margin-bottom: 30px;
+
+    color: #555555;
+
+    margin: 0 0 25px 0;
 }
 
 .hero-text p {
     max-width: 720px;
+
     font-size: 20px;
     line-height: 1.6;
+
+    margin-bottom: 0;
 }
 
 
-/* Buttons */
+/* Hero buttons */
 
 .hero-buttons {
-    margin-top: 25px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    margin-right: 12px;
+    margin-bottom: 10px;
+
+    background: #17324d;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    background: #284d70;
+    transform: translateY(-2px);
 }
 
 
-/* Profile image */
+/* =========================
+   PROFILE PHOTO
+========================= */
 
 .hero-image {
     display: flex;
@@ -172,9 +156,8 @@ footer {
 }
 
 .profile-photo {
-    width: 250px !important;
-    height: 250px !important;
-    max-width: 250px !important;
+    width: 250px;
+    height: 250px;
 
     object-fit: cover;
     object-position: center;
@@ -187,17 +170,96 @@ footer {
 }
 
 
-/* Mobile layout */
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section:not(.hero) {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 25px;
+}
+
+section h2 {
+    font-size: 32px;
+
+    margin-top: 0;
+}
+
+
+/* =========================
+   RESEARCH CARDS
+========================= */
+
+.research-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.card {
+    border: 1px solid #dddddd;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    background: #17324d;
+    color: white;
+
+    padding: 35px;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
 
 @media (max-width: 800px) {
 
+    nav {
+        padding: 18px 25px;
+    }
+
     .hero {
-        padding: 50px 25px;
+        min-height: auto;
+
+        padding: 60px 25px;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
+
         gap: 35px;
+
         text-align: center;
     }
 
@@ -219,12 +281,35 @@ footer {
 
     .hero-text p {
         font-size: 18px;
+
         margin-left: auto;
         margin-right: auto;
     }
 
     .profile-photo {
-        width: 190px !important;
-        height: 190px !important;
+        width: 190px;
+        height: 190px;
     }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav div {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text h2 {
+        font-size: 22px;
+    }
+
 }
