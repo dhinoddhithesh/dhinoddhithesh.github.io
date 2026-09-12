@@ -1310,8 +1310,8 @@ footer {
         padding: 30px;
     }
 
-    .contact-links {
-        grid-template-columns: 1fr;
-    }
-
+   .contact-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
