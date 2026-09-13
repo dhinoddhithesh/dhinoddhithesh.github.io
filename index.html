@@ -11,21 +11,37 @@
 
 </head>
 
-<body>
+<body id="top">
 
-<nav>
+<nav class="site-nav">
 
-    <strong>Dhino Dhithesh</strong>
-<div>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Expertise</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-</div>
-    
+    <a href="#top" class="nav-brand">
+        Dhino Dhithesh
+    </a>
+
+    <button class="nav-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+    <div class="nav-links" id="nav-links">
+
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Expertise</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
 </nav>
 
 <section class="hero">
@@ -1226,11 +1242,65 @@
 
 </section>
     
-<footer>
+<footer class="site-footer">
 
-    © 2026 Dhino Dhithesh Neethiyarasu
+    <div class="footer-inner">
+
+        <div class="footer-identity">
+
+            <strong>
+                Dhino Dhithesh Neethiyarasu
+            </strong>
+
+            <span>
+                Food Science & Biotechnology Researcher
+            </span>
+
+        </div>
+
+        <a href="#top" class="back-to-top">
+            Back to top ↑
+        </a>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 Dhino Dhithesh Neethiyarasu
+
+    </div>
 
 </footer>
 
+    <script>
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("open");
+
+        const isOpen = navLinks.classList.contains("open");
+
+        navToggle.setAttribute("aria-expanded", isOpen);
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            navLinks.classList.remove("open");
+
+            navToggle.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+</script>
+    
 </body>
 </html>
